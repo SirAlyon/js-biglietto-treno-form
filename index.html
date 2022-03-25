@@ -10,7 +10,7 @@
 </head>
 <body class="p-5 bg_pink">
     
-    <h2 class="text-center text-white">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
+    <h2 class="text-center text-white mb-4">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
 
     <div class="container bg-light rounded p-3">
         <div class="d-flex justify-content-center">
@@ -37,39 +37,55 @@
         </div>
 
         <div class="mt-4 d-flex justify-content-center">
-            <button id="generate" class="mx-3">Genera</button>
-            <button id="delete">Annulla</button> 
+            <button id="generate" class="mx-3 rounded">Genera</button>
+            <button id="delete" class="rounded">Annulla</button> 
         </div> 
     </div>
     
-    <h2 class="text-center text-white">IL TUO BIGLIETTO</h2>
+    <h2 class="text-center text-white mt-4">IL TUO BIGLIETTO</h2>
 
     <!-- Dati Passeggero -->
 
     <section class="container bg-light rounded p-3">
-        <h4>DETTAGLIO PASSEGGERI</h4>
+        <h4 class="fw-bold mb-0">DETTAGLIO PASSEGGERI</h4>
+        <hr class="m-0">
         <div class="row">
-            <div class="col bg_gray">
-                <span>NOME PASSEGGERO</span>
-                <div class="fw-bold" id="p-name"></div>
-            </div>
             <div class="col">
-                <span>OFFERTA</span>
-                <div id="discount"></div>
+                <div class="bg_gray custom_height p-3">
+                   <span class="fs-3">NOME PASSEGGERO</span>
+                   <div class="fw-bold fs-3 mt-2" id="p-name"></div> 
+                </div>
             </div>
-            <div class="col">
-                <span>CARROZZA</span>
-                <div id="carrozza"></div>
+
+            <div class="col custom_height">
+                <div class="d-flex flex-column justify-content-around h-100 p-1">
+                   <span class="fs-4">OFFERTA</span>
+                    <div id="discount"></div> 
+                </div>
             </div>
+
             <div class="col">
-                <span>Codice CP</span>
-                <div id="cp"></div>
+                <div class="d-flex flex-column justify-content-around h-100 p-1"> 
+                    <span class="fs-4">CARROZZA</span>
+                    <div id="carrozza"></div>
+                </div>
             </div>
+
             <div class="col">
-                <span>Costo biglietto</span>
-                <div id="trip_cost"></div>
+                <div class="d-flex flex-column justify-content-around h-100 p-1">
+                    <span class="fs-4">Codice CP</span>
+                    <div id="cp"></div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="d-flex flex-column justify-content-around h-100 p-1">
+                  <span class="fs-4">Costo biglietto</span>
+                    <div id="trip_cost"></div>  
+                </div>
             </div>
         </div>
+        <hr class="m-0">
     </section>
 
 
