@@ -1,0 +1,19 @@
+*{
+    margin: 0;padding: 0;box-sizing: border-box;
+}
+
+.bg_pink{
+    background-color: rgba(185, 20, 80, 1);
+}
+
+.bg_gray{
+   background-color:rgba(128, 128, 128, 1);
+}
+
+.input>span{
+    color: rgba(185, 20, 80, 1);
+}
+
+section span{
+    font-weight: bold;
+}

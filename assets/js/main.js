@@ -38,6 +38,8 @@ console.log(trip_cost.toFixed(2) + " €")
 document.getElementById("generate").addEventListener("click", function(){
     document.getElementById("p-name").innerHTML = userFullName
     document.getElementById("discount").innerHTML = `SCONTO ${user_age}`
+    document.getElementById("carrozza").innerHTML = Math.floor(Math.random() * 10) + 1
+    document.getElementById("cp").innerHTML = Math.floor(Math.random() * 10000) + 1
     document.getElementById("trip_cost").innerHTML = `${trip_cost.toFixed(2)} €`
 
 
