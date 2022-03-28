@@ -5,10 +5,10 @@ va applicato uno sconto del 20% per i minorenni
 va applicato uno sconto del 40% per gli over 65. */
 
 
-let userFullName = document.getElementById("full_name").value
+const userFullName = document.getElementById("full_name")
 console.log(userFullName);
 
-let trip_km = Number(document.getElementById("trip_km").value)
+const trip_km = Number(document.getElementById("trip_km").value)
 console.log(trip_km);
 
 let user_age = document.getElementById("age").value
@@ -30,9 +30,10 @@ if (user_age === 'minorenne') {
     trip_cost = (trip_km * 0.21) * 0.60
 } 
 
+
 //creazione biglietto
 document.getElementById("generate").addEventListener("click", function(){
-    document.getElementById("p-name").innerHTML = userFullName.toUpperCase()
+    document.getElementById("p-name").innerHTML = userFullName.value.toUpperCase()
     document.getElementById("discount").innerHTML = `SCONTO ${user_age.toUpperCase()}`
     document.getElementById("carrozza").innerHTML = Math.floor(Math.random() * 10) + 1
     document.getElementById("cp").innerHTML = Math.floor(Math.random() * 10000) + 1
@@ -45,7 +46,19 @@ document.getElementById("generate").addEventListener("click", function(){
     }
 });
 
+/* document.getElementById("delete").addEventListener("click", function(){
+    document.getElementById("p-name").innerHTML = ''
+    document.getElementById("discount").innerHTML = ''
+    document.getElementById("carrozza").innerHTML = ''
+    document.getElementById("cp").innerHTML = ''
+    document.getElementById("trip_cost").innerHTML = ''
+    document.getElementById("full_name").value = ''
+    document.getElementById("trip_km").value = ''
+    document.getElementById("age").value = ''
+});  */
+
 document.getElementById("delete").addEventListener("click", function(){
+    document.location.reload();
     document.getElementById("p-name").innerHTML = ''
     document.getElementById("discount").innerHTML = ''
     document.getElementById("carrozza").innerHTML = ''
