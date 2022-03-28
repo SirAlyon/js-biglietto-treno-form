@@ -24,9 +24,9 @@ if (isNaN(trip_km)) {
 }
 
 //calcoliamo gli sconti in base all'età dell'utente
-if (user_age === 'minorenne') {
+if (user_age == 'minorenne') {
     trip_cost = (trip_km * 0.21) * 0.80
-} else if (user_age === 'over 65') {
+} else if (user_age == 'over 65') {
     trip_cost = (trip_km * 0.21) * 0.60
 } 
 
@@ -38,7 +38,7 @@ document.getElementById("generate").addEventListener("click", function(){
     document.getElementById("carrozza").innerHTML = Math.floor(Math.random() * 10) + 1
     document.getElementById("cp").innerHTML = Math.floor(Math.random() * 10000) + 1
     document.getElementById("trip_cost").innerHTML = `${trip_cost.toFixed(2)} €`
-    if (user_age ==='maggiorenne') {
+    if (user_age =='maggiorenne') {
         document.getElementById("discount").innerHTML = `SCONTO NON DISPONIBILE`
     }
     if(isNaN(trip_cost)){
